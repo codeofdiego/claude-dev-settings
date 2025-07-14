@@ -5,3 +5,11 @@
 *.backup
 *.tmp
 .DS_Store
+
+# Exclude existing local files and directories
+ide/
+projects/
+shell-snapshots/
+statsig/
+todos/
+claude-settings-temp/
