@@ -1,0 +1,7 @@
+# Keep all Claude configurations
+# This repo is specifically for Claude Code settings
+
+# But exclude any potential sensitive data
+*.backup
+*.tmp
+.DS_Store
