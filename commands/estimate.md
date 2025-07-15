@@ -1,4 +1,4 @@
-## Analyze Ticket and Create Implementation Plan
+## Analyze Ticket and Create Implementation Plan with Estimates
 
 You are tasked with analyzing a ticket description and creating a comprehensive implementation plan. Follow these steps:
 
@@ -10,7 +10,7 @@ You are tasked with analyzing a ticket description and creating a comprehensive 
    - Clarify any ambiguous requirements
 
 2. **Codebase Investigation**
-   - Search the codebase to locate relevant files, functions, and components
+   - Search the codebase thoroughly to locate relevant files, functions, and components
    - Understand the current architecture and patterns
    - Identify dependencies and integration points
    - Map out the areas of code that will need changes

@@ -1,27 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:*.github.io)",
-      "WebFetch(domain:developer.mozilla.org)",
-      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:*)",
       "Bash(claude mcp add:*)",
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs",
-      "Bash(git *)",
-      "Bash(npm *)",
-      "Bash(yarn *)",
-      "Bash(pnpm *)",
-      "Bash(cargo *)",
-      "Bash(go *)",
-      "Bash(python *)",
-      "Bash(pip *)",
-      "Bash(pytest *)",
-      "Bash(jest *)",
-      "Bash(vitest *)",
-      "Bash(docker *)",
-      "Bash(kubectl *)",
+      "Bash(npm:*)",
+      "Bash(jest:*)",
+      "Bash(vitest:*)",
       "Bash(find:*)",
       "Bash(ls:*)",
       "Edit",
@@ -34,8 +20,7 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git remote add:*)",
-      "Bash(git push:*)"
+      "Bash(git remote add:*)"
     ],
     "deny": [
       "Bash(rm -rf *)",
@@ -81,5 +66,20 @@
       "Edit(.ssh/*)",
       "Write(.ssh/*)"
     ]
-  }
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*/tdd*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/tdd-workflow-enforcer.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "sonnet",
+  "includeCoAuthoredBy": false
 }
