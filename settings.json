@@ -27,7 +27,11 @@
       "Bash(gh pr view:*)",
       "Bash(gh pr diff:*)",
       "Bash(claude mcp:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(npx jest:*)",
+      "Bash(node:*)",
+      "Bash(git clone:*)",
+      "Bash(mv:*)",
     ],
     "deny": [
       "Bash(rm -rf *)",
