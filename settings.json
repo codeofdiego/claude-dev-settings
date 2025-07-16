@@ -1,11 +1,14 @@
 {
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "WebFetch(domain:*)",
       "Bash(claude mcp add:*)",
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs",
+      "mcp__ide__getDiagnostics",
       "Bash(npm:*)",
+      "Bash(CI=true npm test:*)",
       "Bash(jest:*)",
       "Bash(vitest:*)",
       "Bash(find:*)",
@@ -20,7 +23,11 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git remote add:*)"
+      "Bash(git remote add:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(claude mcp:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": [
       "Bash(rm -rf *)",
@@ -67,6 +74,7 @@
       "Write(.ssh/*)"
     ]
   },
+  "model": "sonnet",
   "hooks": {
     "PreToolUse": [
       {
@@ -79,7 +87,5 @@
         ]
       }
     ]
-  },
-  "model": "sonnet",
-  "includeCoAuthoredBy": false
+  }
 }
