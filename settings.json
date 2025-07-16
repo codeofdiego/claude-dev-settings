@@ -31,7 +31,7 @@
       "Bash(npx jest:*)",
       "Bash(node:*)",
       "Bash(git clone:*)",
-      "Bash(mv:*)",
+      "Bash(mv:*)"
     ],
     "deny": [
       "Bash(rm -rf *)",
