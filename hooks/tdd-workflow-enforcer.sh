@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TDD Workflow Enforcer Hook
-# Shows TDD workflow reminders when using /tdd command
+# Shows TDD workflow reminders during TDD sessions
 
 # Read JSON input from stdin
 input=$(cat)
@@ -16,6 +16,25 @@ if [ -z "$session_id" ]; then
 fi
 if [ -z "$tool_name" ]; then
     tool_name=""
+fi
+
+# Check if we're in TDD mode by looking for TDD indicator file
+tdd_mode_file="/tmp/claude-tdd-mode-${session_id}"
+
+# Check if this session was started with /tdd command or if TDD mode file exists
+# Look for TDD indicators in command history or context
+tdd_active=false
+if [ -f "$tdd_mode_file" ]; then
+    tdd_active=true
+elif echo "$input" | grep -q "tdd\|TDD"; then
+    # Create TDD mode indicator for this session
+    touch "$tdd_mode_file"
+    tdd_active=true
+fi
+
+# Exit early if not in TDD mode
+if [ "$tdd_active" = false ]; then
+    exit 0
 fi
 
 # Counter and reminder file paths

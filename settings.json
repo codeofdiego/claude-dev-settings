@@ -78,7 +78,7 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "*/tdd*",
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
