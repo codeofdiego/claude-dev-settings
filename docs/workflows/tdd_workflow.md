@@ -109,7 +109,7 @@ Resolutions:
 ```
 
 ## Code Review agent
-@docs/code_review_agent.md
+@docs/guidelines/code_review_agent.md
 
 ## ✅ Definition of Done
 

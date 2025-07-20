@@ -101,7 +101,7 @@ Resolutions:
 ```
 
 ## Code Review Agent
-@docs/code_review_agent.md
+@docs/guidelines/code_review_agent.md
 
 ## ✅ Definition of Done
 A task is complete only when ALL boxes are checked:
