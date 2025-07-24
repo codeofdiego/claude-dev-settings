@@ -2,15 +2,13 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      // Core File Operations
       "Read",
       "Write",
       "Edit",
       "MultiEdit",
       "List",
 
-      // Version Control
-      "Bash(git:*)",         // Git operations
+      "Bash(git:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git pull:*)",
@@ -27,76 +25,65 @@
       "Bash(git diff:*)",
       "Bash(git status:*)",
       
-      // Basic File System Commands
-      "Bash(ls:*)",          // List directory contents
-      "Bash(cat:*)",         // Display file contents
-      "Bash(pwd:*)",         // Print working directory
-      "Bash(cd:*)",          // Change directory
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(pwd:*)",
+      "Bash(cd:*)",
       
-      // Search and Discovery
-      "Bash(find:*)",        // Find files/directories
-      "Bash(grep:*)",        // Search text patterns
-      "Bash(rg:*)",          // Ripgrep - fast search alternative
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
       
-      // Development Tools
-      "Bash(npm:*)",         // Node package manager
-      "Bash(npx:*)",         // Execute npm packages
-      "Bash(node:*)",        // Node.js runtime
-      "Bash(python:*)",      // Python interpreter
-      "Bash(make:*)",        // Build automation
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(python:*)",
+      "Bash(make:*)",
       
-      // Data Processing & Network
-      "Bash(jq:*)",          // JSON processor
-      "Bash(curl:*)",        // Transfer data from/to servers
-      "Bash(echo:*)",        // Display text/variables
+      "Bash(jq:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
       
-      // Deployment & CI/CD
-      "Bash(vercel:*)",      // Vercel deployment platform
-      "Bash(gh:*)"           // GitHub CLI for PRs, issues, etc.
+      "Bash(vercel:*)",
+      "Bash(gh:*)"
     ],
     
     "deny": [
-      // Destructive Operations
-      "Bash(rm -rf *)",      // Prevent recursive force deletion
+      "Bash(rm -rf *)",
       
-      // Network Operations (duplicated/restricted)
-      "Bash(curl *)",        // Restrict general curl usage
-      "Bash(wget *)",        // Prevent file downloads
-      "Bash(ssh *)",         // No SSH connections
-      "Bash(scp *)",         // No secure copy operations
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
       
-      // Environment Variables & Secrets
-      "Read(*.env*)",        // Protect .env files
+      "Read(*.env*)",
       "Edit(*.env*)",
       "Write(*.env*)",
-      "Read(.env.*)",        // Protect .env.* variants
+      "Read(.env.*)",
       "Edit(.env.*)",
       "Write(.env.*)",
       
-      // Sensitive Keywords
-      "Read(*secret*)",      // Files containing 'secret'
+      "Read(*secret*)",
       "Edit(*secret*)",
       "Write(*secret*)",
-      "Read(*password*)",    // Files containing 'password'
+      "Read(*password*)",
       "Edit(*password*)",
       "Write(*password*)",
       
-      // Cryptographic Materials
-      "Read(*.key)",         // Private key files
+      "Read(*.key)",
       "Edit(*.key)",
       "Write(*.key)",
-      "Read(*.pem)",         // PEM certificate files
+      "Read(*.pem)",
       "Edit(*.pem)",
       "Write(*.pem)",
-      "Read(*.p12)",         // PKCS#12 certificate files
+      "Read(*.p12)",
       "Edit(*.p12)",
       "Write(*.p12)",
-      "Read(*.pfx)",         // Personal exchange format
+      "Read(*.pfx)",
       "Edit(*.pfx)",
       "Write(*.pfx)",
       
-      // Private Directories
-      "Read(.ssh/*)",        // SSH configuration & keys
+      "Read(.ssh/*)",
       "Edit(.ssh/*)",
       "Write(.ssh/*)"
     ]
