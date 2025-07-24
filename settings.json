@@ -2,78 +2,86 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      "WebFetch(domain:*)",
-      "Bash(claude mcp add:*)",
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs",
-      "mcp__ide__getDiagnostics",
-      "Bash(npm:*)",
-      "Bash(CI=true npm test:*)",
-      "Bash(jest:*)",
-      "Bash(vitest:*)",
-      "Bash(find:*)",
-      "Bash(ls:*)",
+      // Core File Operations
+      "Read",
+      "Write",
       "Edit",
       "MultiEdit",
-      "Write(*.md)",
-      "Write(*.json)",
-      "Write(*.yaml)",
-      "Write(*.yml)",
-      "Write(*.toml)",
-      "Bash(git init:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git remote add:*)",
-      "Bash(gh pr view:*)",
-      "Bash(gh pr diff:*)",
-      "Bash(claude mcp:*)",
-      "Bash(npx tsc:*)",
-      "Bash(npx jest:*)",
-      "Bash(node:*)",
-      "Bash(git clone:*)",
-      "Bash(mv:*)"
+      "List",
+
+      // Version Control
+      "Bash(git:*)",         // Git operations
+      
+      // Basic File System Commands
+      "Bash(ls:*)",          // List directory contents
+      "Bash(cat:*)",         // Display file contents
+      "Bash(pwd:*)",         // Print working directory
+      "Bash(cd:*)",          // Change directory
+      
+      // Search and Discovery
+      "Bash(find:*)",        // Find files/directories
+      "Bash(grep:*)",        // Search text patterns
+      "Bash(rg:*)",          // Ripgrep - fast search alternative
+      
+      // Development Tools
+      "Bash(npm:*)",         // Node package manager
+      "Bash(npx:*)",         // Execute npm packages
+      "Bash(node:*)",        // Node.js runtime
+      "Bash(python:*)",      // Python interpreter
+      "Bash(make:*)",        // Build automation
+      
+      // Data Processing & Network
+      "Bash(jq:*)",          // JSON processor
+      "Bash(curl:*)",        // Transfer data from/to servers
+      "Bash(echo:*)",        // Display text/variables
+      
+      // Deployment & CI/CD
+      "Bash(vercel:*)",      // Vercel deployment platform
+      "Bash(gh:*)"           // GitHub CLI for PRs, issues, etc.
     ],
+    
     "deny": [
-      "Bash(rm -rf *)",
-      "Bash(curl *)",
-      "Bash(wget *)",
-      "Bash(ssh *)",
-      "Bash(scp *)",
-      "WebFetch(internal-*)",
-      "Read(*.env*)",
+      // Destructive Operations
+      "Bash(rm -rf *)",      // Prevent recursive force deletion
+      
+      // Network Operations (duplicated/restricted)
+      "Bash(curl *)",        // Restrict general curl usage
+      "Bash(wget *)",        // Prevent file downloads
+      "Bash(ssh *)",         // No SSH connections
+      "Bash(scp *)",         // No secure copy operations
+      
+      // Environment Variables & Secrets
+      "Read(*.env*)",        // Protect .env files
       "Edit(*.env*)",
       "Write(*.env*)",
-      "Read(.env.*)",
+      "Read(.env.*)",        // Protect .env.* variants
       "Edit(.env.*)",
       "Write(.env.*)",
-      "Read(*secret*)",
+      
+      // Sensitive Keywords
+      "Read(*secret*)",      // Files containing 'secret'
       "Edit(*secret*)",
       "Write(*secret*)",
-      "Read(*password*)",
+      "Read(*password*)",    // Files containing 'password'
       "Edit(*password*)",
       "Write(*password*)",
-      "Read(*.key)",
+      
+      // Cryptographic Materials
+      "Read(*.key)",         // Private key files
       "Edit(*.key)",
       "Write(*.key)",
-      "Read(*.pem)",
+      "Read(*.pem)",         // PEM certificate files
       "Edit(*.pem)",
       "Write(*.pem)",
-      "Read(*credentials*)",
-      "Edit(*credentials*)",
-      "Write(*credentials*)",
-      "Read(config/secrets/*)",
-      "Edit(config/secrets/*)",
-      "Write(config/secrets/*)",
-      "Read(private/*)",
-      "Edit(private/*)",
-      "Write(private/*)",
-      "Read(*.p12)",
+      "Read(*.p12)",         // PKCS#12 certificate files
       "Edit(*.p12)",
       "Write(*.p12)",
-      "Read(*.pfx)",
+      "Read(*.pfx)",         // Personal exchange format
       "Edit(*.pfx)",
       "Write(*.pfx)",
-      "Read(.ssh/*)",
+      
+      // Private Directories
+      "Read(.ssh/*)",        // SSH configuration & keys
       "Edit(.ssh/*)",
       "Write(.ssh/*)"
     ]
