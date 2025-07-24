@@ -37,7 +37,7 @@ Always announce your progress:
 ### Step 3: Code Review
 **What to do:**
 - Stop coding completely
-- Start new task with Code Review Super Star Agent to review the code
+- Start new task with Code Review Agent to review the code
 - Document all findings in review log
 - Analyze for:
   - Logic errors

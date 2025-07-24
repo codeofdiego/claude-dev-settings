@@ -101,18 +101,5 @@
       "Write(.ssh/*)"
     ]
   },
-  "model": "sonnet",
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/tdd-workflow-enforcer.sh"
-          }
-        ]
-      }
-    ]
-  }
+  "model": "sonnet"
 }
