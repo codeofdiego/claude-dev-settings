@@ -45,7 +45,14 @@
       "Bash(echo:*)",
       
       "Bash(vercel:*)",
-      "Bash(gh:*)"
+      "Bash(gh:*)",
+
+      "mcp__browsermcp__browser_navigate",
+      "mcp__browsermcp__browser_go_back",
+      "mcp__browsermcp__browser_go_forward",
+      "mcp__browsermcp__browser_snapshot",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
     ],
     
     "deny": [
