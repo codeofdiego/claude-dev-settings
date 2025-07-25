@@ -7,7 +7,6 @@
       "Edit",
       "MultiEdit",
       "List",
-
       "Bash(git:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
@@ -24,29 +23,23 @@
       "Bash(git show:*)",
       "Bash(git diff:*)",
       "Bash(git status:*)",
-      
       "Bash(ls:*)",
       "Bash(cat:*)",
       "Bash(pwd:*)",
       "Bash(cd:*)",
-      
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
-      
       "Bash(npm:*)",
       "Bash(npx:*)",
       "Bash(node:*)",
       "Bash(python:*)",
       "Bash(make:*)",
-      
       "Bash(jq:*)",
       "Bash(curl:*)",
       "Bash(echo:*)",
-      
       "Bash(vercel:*)",
       "Bash(gh:*)",
-
       "mcp__browsermcp__browser_navigate",
       "mcp__browsermcp__browser_go_back",
       "mcp__browsermcp__browser_go_forward",
@@ -54,29 +47,24 @@
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs"
     ],
-    
     "deny": [
       "Bash(rm -rf *)",
-      
       "Bash(curl *)",
       "Bash(wget *)",
       "Bash(ssh *)",
       "Bash(scp *)",
-      
       "Read(*.env*)",
       "Edit(*.env*)",
       "Write(*.env*)",
       "Read(.env.*)",
       "Edit(.env.*)",
       "Write(.env.*)",
-      
       "Read(*secret*)",
       "Edit(*secret*)",
       "Write(*secret*)",
       "Read(*password*)",
       "Edit(*password*)",
       "Write(*password*)",
-      
       "Read(*.key)",
       "Edit(*.key)",
       "Write(*.key)",
@@ -89,7 +77,6 @@
       "Read(*.pfx)",
       "Edit(*.pfx)",
       "Write(*.pfx)",
-      
       "Read(.ssh/*)",
       "Edit(.ssh/*)",
       "Write(.ssh/*)"
