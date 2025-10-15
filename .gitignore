@@ -25,5 +25,13 @@ plugins/
 *.tmp
 .DS_Store
 
-# Old exclusions
+# Exclude existing local files and directories
+ide/
+projects/
+shell-snapshots/
+statsig/
+todos/
 claude-settings-temp/
+file-history/
+history.jsonl
+debug/
