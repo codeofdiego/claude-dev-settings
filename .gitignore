@@ -1,15 +1,29 @@
 # Keep all Claude configurations
 # This repo is specifically for Claude Code settings
 
-# But exclude any potential sensitive data
+# Runtime and session data (machine-specific, regenerated)
+cache/
+debug/
+file-history/
+history.jsonl
+session-env/
+stats-cache.json
+telemetry/
+shell-snapshots/
+
+# Machine-specific data
+ide/
+projects/
+statsig/
+todos/
+.claude/
+plans/
+plugins/
+
+# Temporary files
 *.backup
 *.tmp
 .DS_Store
 
-# Exclude existing local files and directories
-ide/
-projects/
-shell-snapshots/
-statsig/
-todos/
+# Old exclusions
 claude-settings-temp/

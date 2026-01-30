@@ -53,6 +53,7 @@
       "Bash(wget *)",
       "Bash(ssh *)",
       "Bash(scp *)",
+      "Bash(git push:*)",
       "Read(*.env*)",
       "Edit(*.env*)",
       "Write(*.env*)",
@@ -82,5 +83,8 @@
       "Write(.ssh/*)"
     ]
   },
-  "model": "sonnet"
+  "model": "opusplan",
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  }
 }
